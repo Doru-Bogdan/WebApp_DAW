@@ -1,0 +1,26 @@
+<div *ngIf="!profile.userDetails">
+    <h4>Trebuie sa va creati un User Details</h4>
+    <button mdbBtn color="danger" block="true" (click)="openModal()">Add</button>
+</div>
+
+<div *ngIf="profile.userDetails">
+    <h4>Last name:</h4>
+    <h4>{{profile.userDetails.lastName}}</h4>
+    <br>
+    <h4>First name:</h4>
+    <h4>{{profile.userDetails.firstName}}</h4>
+    <br>
+    <h4>Email:</h4>
+    <h4>{{profile.userDetails.email}}</h4>
+</div>
+<br>
+<div *ngIf="carsRent.carLoans.length == 0">
+    <h4>Nicio masina inchiriata</h4>
+</div>
+
+<div *ngIf="carsRent.carLoans">
+    <ng-container *ngFor=" let car of carsRent.carLoans">
+        <h4>Model: </h4>
+        <h4>{{car.vehicle.vehicleName}}</h4><br>
+    </ng-container>
+</div>

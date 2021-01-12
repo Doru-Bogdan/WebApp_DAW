@@ -1,0 +1,26 @@
+<div class="container">
+    <div>
+      <div id="container-content">
+  
+        <div class="container">
+        
+          <div class="row pl-5">
+            <ng-container *ngFor=" let car of cars ">
+              <div class="view col mb-3 mr-3 p-0 hoverable" (click)="openModal(car.id)">
+      
+                <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2021-mercedes-benz-cls-class-1591735006.jpg?crop=0.708xw:0.531xh;0.0737xw,0.353xh&resize=1200:*"  class="img-fluid z-depth-1 rounded"  alt="hoverable"  />
+                
+                <div class="detail">
+                  <p id="p1">{{ car.vehicleName }} </p>
+                 
+                  
+                </div>
+              </div>
+              <div class="w-100" *ngIf="ind != 0 && (ind + 1) % 4 == 0"></div>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

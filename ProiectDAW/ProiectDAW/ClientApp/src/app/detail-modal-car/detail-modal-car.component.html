@@ -1,0 +1,26 @@
+<div class="col-md-6 col-sm-6 col-lg-8 mx-auto my-4" id="modal">
+
+  <div class="container col-lg-12">
+    <div class="row">
+      <div class="col-lg-8" style="padding-left:10px">
+        <div class="row">
+          <div class="details">
+            <p>Nume model: {{vehicle.vehicleName}}</p>
+            <br>
+            <p>Capacitate motor: {{vehicle.engineCapacity}} cm3</p>
+            <br>
+            <p>Putere motor: {{vehicle.enginePower}} CP</p>
+            <br>
+            <p>Spatiu portbagaj: {{vehicle.trunkSpace}} l</p>
+          </div>
+        </div>
+        <div class="div">
+          <button class="btn btn-primary" (click)='rentCar()'>Rent</button>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
